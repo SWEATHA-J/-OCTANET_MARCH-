@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: fn;
+            src: url(BurbankBigCongensed-Black.otf);
+        }
+        body{
+            margin:0px;
+            background: linear-gradient(-90deg,#2f80ed,#55caf2);
+        }
+        #main{
+            width: 100%;
+            height: 100%;
+            background:url('BG.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #drop{
+            border-radius: 100%;
+            position: relative;
+            left:0px;
+            top:  40px;
+            height:15em;
+            width: 140px;
+            overflow:hidden;
+        }
+        #drop:before,
+        #drop:after{
+            content:'';
+            display: block;
+            position:absolute;
+        }
+        #drop:after{
+            background:rgb(52,152,219);
+            background:linear-gradient(rgba(52,255,255,1) 0%,rgba(52,152,219,1) 10%, rgba(152,252,219,1) 100%);
+            border-radius: 100% 0 50% 0;
+            left:0px;
+            bottom:0;
+            width:inherit;
+            height: 3em;
+            opacity:0.7;
+            animation: surface 3s linear infinite;
+        }
+
+        @keyframes surface{
+            50%{
+                border-radius: 0 75% 0 75%;
+                opacity: 0.5;
+                height: 3.5em;
+            }
+        }
+
+        #bottle{
+            height: 300px;
+            width: 135px;
+            margin-left: 2px;
+            clip-path: polygon(92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%,75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%,65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60% );
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%,-50%);
+        }
+
+        #img{
+            width: 214px;
+            position: absolute;
+            top: 55.8%;
+            left: 70%;
+            transform: translate(-50%,-50%);
+        }
+        #top{
+            position: absolute;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+       #logo{
+            display: inline-block;
+        }
+        #logo img{
+            width: 100px;
+        }
+        #menu{
+            display: inline-block;
+            margin-left: 130px;
+        }
+        #menu ul{
+            list-style:none;
+            font-family: arial;
+            font-size: 10px;
+            color: black;
+        }
+        #menu ul li{
+            display:inline-block;
+            margin-left: 40px;
+            letter-spacing: 2px;
+        }
+
+        #icons{
+            display: inline-block;
+            margin-left: 350px;
+        }
+        #icons ul{
+            list-style: none;
+        }
+        #icons ul li{
+            display:inline-block;
+            color: black;
+            margin-left: 40px;
+        }
+        #content{
+            position:absolute;
+            top: 250px;
+            left: 100px;
+        }
+        #msg{
+            font-family: fn;
+            font-size: 10em;
+            color: black;
+        }
+        #msg2{
+            font-family: fn;
+            font-size: 1em;
+            color: black;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+        #btn1,#btn2{
+            width: 210px;
+            height: 40px;
+            display: inline-block;
+            background-color: #FFFF00;
+            transform: skewX(-15deg);
+            font-family: fn;
+            letter-spacing: 1px;
+            margin-left: 50px;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        #btn1:before,
+        #btn2:before{
+            content: 'GET IT NOW';
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%) skewX(15deg);
+        }
+        #btn2{
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+        }
+        #btn2:before{
+            content: 'WATCH TRALIER';
+        }
+        
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <div id="main">
+        <div id="top">
+            <div id="logo">
+                <img src="LOGO.png"/>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>BATTLE PASS</li>
+                    <li>CREATIVE</li>
+                    <li>TOURNAMENT</li>
+                    <li>NEWS</li>
+                    <li>MERCH</li>
+                    <li>HELP</li>
+                </ul>
+            </div>
+
+            <div id="icons">
+                <ul>
+                    <li>
+                        <i class="fa fa-search"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-user"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="msg">SPLASH DOWN</div>
+            <div id="msg2">
+                SURVIVE MORE THAN JUST STROM IN THE AFTERMATH OF ITS REVENGE.<br>AS THE ISLAND ADAPTS TO IT'S FLOODED WAY OF LIFE,STAYS AFLOAT<br>AND TAKE ON NEW CHALLENGES.
+            </div>
+            <div id="btn1"></div>
+            <div id="btn2"></div>
+        </div>
+
+        <div id="bottle">
+            <div id="drop"></div>
+        </div>
+        <img src="Bottle.png" id="img"/>
+    </div>
+</body>
+</html>
